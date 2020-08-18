@@ -28,6 +28,7 @@ func New(opts ...Option) *Object {
 
 func getMetadata(s *setting) interface{} {
 	if s.endpoint == "" {
+		s.Logf("endpoint is not set")
 		return nil
 	}
 
