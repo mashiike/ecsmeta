@@ -24,7 +24,7 @@ import (
 )
 
 func main() {
-	const templateText = `Images: {{ecsmeta ".Images"}}`
+    const templateText = `Image: {{ecsmeta ".Containers[0].Image"}}`
 	funcMap := ecsmeta.MustFuncMap()
 
 	tmpl, err := template.New("txt").Funcs(funcMap).Parse(templateText)
